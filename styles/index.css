@@ -1,0 +1,142 @@
+body{
+  box-sizing: border-box;
+  font-family: Outfit;
+  color: rgba(0,0,0,0.7);
+  font-size: 12px;
+  background-color: hsl(30, 54%, 90%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  padding: 50px 0;
+}
+
+.image-container{
+  width: 480px;
+  height: 200px;
+  
+}
+
+.image-omelette{
+  width: 480px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.main{
+  display: flex;
+  flex-direction:column ;
+  width: 480px ;
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  border-radius: 20px;
+  justify-content: center;
+  line-height: 20px;
+
+}
+
+h1,h2{
+  font-family: Young Serif;
+  font-weight: 400;
+}
+
+h2{
+ color: hsl(14, 45%, 36%);
+}
+
+.preparation-container{
+  background-color:hsl(0, 60%, 98%) ;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.peparation-heading{
+  color: hsl(332, 51%, 32%);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.instructions-container, .ingredients-conatiner{
+ border-bottom: 1px solid rgba(0,0,0,0.1);
+ padding-bottom: 10px;
+}
+
+.calories , .carbs, .protein, .fat{
+  display: flex;
+  padding-left: 25px;
+  border-bottom: 1px solid rgba(0,0,0,0.1) ;
+   line-height: 35px;
+   
+}
+
+.fat {
+  
+  border-bottom: none ;
+  
+}
+ .kcal {
+  margin-left: 180px;
+}
+
+.carbs-grams{
+  margin-left: 192px;
+}
+
+.protein-grams{
+  margin-left: 187px;
+}
+
+.fat-grams{
+  margin-left: 207px;
+}
+
+.kcal , .carbs-grams, .protein-grams ,.fat-grams{
+  color:hsl(14, 45%, 36%);
+  font-weight: 700;
+}
+
+ul{
+  list-style: none;
+  padding-left: 5px;
+}
+
+
+ul li::before{
+  content: "•";
+  color: black;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding-right: 12px;
+
+}
+
+.instructions-list {
+  list-style: none; /* Remove default numbering */
+  counter-reset: my-counter; /* Initialize counter */
+  padding-left: 0; /* Remove default padding */
+}
+
+.instructions-list li {
+  position: relative; /* For absolute positioning of counter */
+  padding-left: 3em; /* Space for counter */
+  margin-bottom: 1em; /* Spacing between items */
+  line-height: 1.5; /* Consistent line height */
+  
+}
+
+.instructions-list li::before {
+  counter-increment: my-counter; /* Increment counter */
+  content: counter(my-counter) "."; /* Add counter + dot */
+  position: absolute;
+  left: 0; /* Align to left edge */
+  top: 0; /* Align to top of line */
+  font-weight: bold;
+  color: hsl(14, 45%, 36%);
+  /* Optional: Use monospace font for perfect alignment */
+  min-width: 2em; /* Ensure consistent width */
+  text-align: right; /* Right-align numbers */
+}
+
